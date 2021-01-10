@@ -7,6 +7,6 @@ music.music_controller_listing:
 music.artist_form:
   path: /music/form/artist
   defaults:
-    _form: Drupal\music\Form\AritstForm
+    _form: Drupal\music\Form\ArtistForm
   requirements:
     _permission: 'access content'

@@ -1,22 +1,12 @@
 <?php
 
 function music_menu() {
-  $items['music']= array(
+  $items['/music']= array(
     'title' => 'Music App',
     'route' => 'music.music_controller_listing'
   );
 
-  $items['music/form/artist']= array(
-    'title' => 'Music App',
-    'route' => 'music.artist_form'
-  );
-
-  $items['music/form/genre']= array(
-    'title' => 'Music App',
-    'route' => 'music.artist_form'
-  );
-
-  $items['music/form/album']= array(
+  $items['/music/form/artist']= array(
     'title' => 'Music App',
     'route' => 'music.artist_form'
   );

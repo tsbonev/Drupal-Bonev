@@ -4,8 +4,7 @@ function music_schema() {
 $schema['genre'] = [
     'fields' => [
       'genre_id' => [
-        'type' => 'varchar',
-        'length' => 32,
+        'type' => 'serial',
         'not null' => TRUE,
       ],
       'name' => [
@@ -20,8 +19,7 @@ $schema['genre'] = [
 $schema['artist'] = [
     'fields' => [
       'artist_id' => [
-        'type' => 'varchar',
-        'length' => 32,
+        'type' => 'serial',
         'not null' => TRUE,
       ],
       'name' => [
@@ -41,8 +39,7 @@ $schema['artist'] = [
 $schema['album'] = [
     'fields' => [
       'album_id' => [
-        'type' => 'varchar',
-        'length' => 32,
+        'type' => 'serial',
         'not null' => TRUE,
       ],
       'artist_id' => [
