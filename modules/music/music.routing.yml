@@ -1,0 +1,6 @@
+music:
+  path: /music
+  defaults:
+    _controller: Drupal\music\Controller\MusicController::hello
+  requirements:
+    _permission: 'access content'
