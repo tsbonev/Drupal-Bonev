@@ -1,6 +1,12 @@
-music:
+music.music_controller_listing:
   path: /music
   defaults:
-    _controller: Drupal\music\Controller\MusicController::hello
+    _controller: Drupal\music\Controller\MusicController::listAlbums
+  requirements:
+    _permission: 'access content'
+music.artist_form:
+  path: /music/form/artist
+  defaults:
+    _form: Drupal\music\Form\AritstForm
   requirements:
     _permission: 'access content'

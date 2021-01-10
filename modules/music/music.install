@@ -1,0 +1,69 @@
+<?php
+function music_schema() {
+
+$schema['genre'] = [
+    'fields' => [
+      'genre_id' => [
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['genre_id'],
+  ];
+
+$schema['artist'] = [
+    'fields' => [
+      'artist_id' => [
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ],
+      'isBand' => [
+              'type' => 'int',
+               'not null' => TRUE,
+               'default' => 1,
+            ],
+    ],
+    'primary key' => ['artist_id'],
+  ];
+
+$schema['album'] = [
+    'fields' => [
+      'album_id' => [
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+      ],
+      'artist_id' => [
+              'type' => 'varchar',
+              'length' => 32,
+              'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['album_id'],
+    'foreign keys' => [
+      'fk_album_artist' => [
+       'table' => 'artist',
+          'columns' => ['artist_id' => 'artist_id'],
+      ]
+    ]
+  ];
+
+ return $schema;
+}
